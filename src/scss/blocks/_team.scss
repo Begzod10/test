@@ -1,0 +1,91 @@
+@import "../base/variables";
+.team{
+  min-height: 600px;
+  &__header{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+  }
+  &__subheader{
+    text-align: center;
+    font-size: 35px;
+    position: relative;
+    &:after{
+      position: absolute;
+      left: 25%;
+      content: '';
+      display: block;
+      width: 50%;
+      height: 2px;
+      background-color: $auto_school;
+    }
+  }
+  &__list{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 270px;
+    height: 315px;
+    border-radius: 5px;
+    color: white;
+    background-color: $auto_school;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    &:hover{
+      background-color: $auto_school2;
+    }
+    &:hover .team__item_links div{
+      background-color: $auto_school2;
+    }
+    &:hover .team__item_img img{
+      transform: scale(1.1);
+
+    }
+    &_img{
+      width: 270px;
+      height: 200px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+      }
+    }
+    &_info{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &_links{
+      display: flex;
+      justify-content: space-around;
+      width: 200px;
+      position: relative;
+      top: -20px;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: $auto_school;
+        border-radius: 100%;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    &_name{
+      font-size: 24px;
+      font-family: 'Gemunu Libre', sans-serif;
+    }
+  }
+  &__video{
+    margin: 20px auto;
+  }
+}

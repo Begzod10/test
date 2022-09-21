@@ -1,0 +1,147 @@
+@import "../base/variables";
+@import "../base/mixins";
+.promo{
+  min-height: 610px;
+  background-color: $auto_school;
+  color: white;
+  //background: url("../../../../../../HTML lessons/Main_Projects/Gennis_Drive/src/img/background/wallpaper.jpg")center center/cover no-repeat;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    &_img{
+      width: 80px;
+      height: 50px;
+    }
+    &_desc{
+      color: white;
+    }
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    align-items: center;
+    height: 100px;
+    &_icon{
+      width: 30px;
+      height: 30px;
+    }
+    &_contact{
+      color: white;
+      display: flex;
+      width: 205px;
+      height: 20px;
+      align-items: center;
+      div{
+        position: relative;
+        left: 12px;
+      }
+    }
+  }
+  &__hamburger{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img{
+      width: 40px;
+      height: 40px;
+    }
+    &_img{
+      transition-duration: 1s;
+    }
+    &_img2{
+      transition-duration: 1s;
+      display: none;
+    }
+  }
+  &__inner{
+
+  }
+  .slick-prev{
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    width: 50px;
+    border: none;
+    outline: none;
+    background-color: $auto_school;
+    }
+  .slick-next{
+    position: absolute;
+    top: 70%;
+    left: -5%;
+    width: 50px;
+    border: none;
+    outline: none;
+    background-color: $auto_school;
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    &_contact{
+      width: 320px;
+      &:first-child{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #49a8d4;
+        height: 70px;
+        box-shadow: 0 0 2px 10px #49a8d4;
+        border-radius: 6px;
+        margin-top: 30px;
+
+      }
+    }
+  }
+  &__cars{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    &_arrows{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 45px;
+      cursor: pointer;
+    }
+    &_img{
+      img{
+        width: 617px;
+        height: 300px;
+      }
+    }
+    &_form{
+      width: 400px;
+      background-color: rgba(227, 227, 227, 0.29);
+      display: flex;
+      flex-direction: column;
+      height: 250px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      input{
+        width: 300px;
+        margin: 10px 0;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 7px;
+        border-radius: 10px;
+        background-color: $auto_school;
+        &::placeholder{
+          color: white;
+        }
+      }
+      button{
+        @include main_button;
+      }
+    }
+  }
+}

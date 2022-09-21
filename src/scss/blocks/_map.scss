@@ -1,0 +1,34 @@
+@import "../base/variables";
+.map{
+  min-height: 500px;
+  position: relative;
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: 400px;
+    background-color: $auto_school2;
+    position: absolute;
+    &:hover{
+      background-color: $auto_school;
+    }
+    &_address{
+      position: relative;
+      &:before{
+        position: absolute;
+        content: "";
+        display: block;
+        width: 22px;
+        height: 20px;
+        left: -31px;
+        background: url("../../icons/archway-solid.svg");
+      }
+    }
+  }
+}

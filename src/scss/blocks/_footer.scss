@@ -1,0 +1,58 @@
+.footer{
+  margin-top: 30px;
+  min-height: 360px;
+  background-color: $auto_school;
+  &__info{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 30px;
+  }
+  &__subheader{
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Gemunu Libre', sans-serif;
+  }
+  &__subheader:first-child{
+    position: relative;
+    left: -35px;
+  }
+  &__subheader{
+    position: relative;
+    left: 30px;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 330px;
+  }
+  &__item{
+    color: white;
+    &_form{
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      justify-content: space-between;
+      align-items: center;
+      input{
+        border: none;
+        outline: none;
+        padding: 5px;
+        width: 200px;
+        border-radius: 6px;
+      }
+      button{
+        @include main_button;
+        align-self: flex-start;
+      }
+    }
+  }
+  &__item:first-child{
+    width: 250px;
+  }
+  &__item:nth-child(3){
+    list-style: none;
+  }
+}

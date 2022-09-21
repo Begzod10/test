@@ -1,0 +1,114 @@
+@import "../base/variables";
+@import "../base/mixins";
+.events{
+  min-height: 500px;
+  background-color: $auto_school2;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  &:before{
+    content: '';
+    display: block;
+    width: 41%;
+    top: 50px;
+    right: -23px;
+    height: 20px;
+    position: absolute;
+    background-color: white;
+    transform: rotate(19deg);
+  }
+  &:after{
+    content: '';
+    display: block;
+    width: 41%;
+    bottom: 0;
+    left: -23px;
+    height: 20px;
+    position: absolute;
+    background-color: #fff;
+    transform: rotate(19deg);
+  }
+  &__list{
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    margin-top: 180px;
+  }
+  &__item{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    height: 400px;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+    overflow-x: hidden;
+    &_info{
+      display: flex;
+    }
+    &_list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transition: 1s all;
+      transform: translateX(50%);
+      &_active{
+        transform: translateX(-150%);
+      }
+    }
+    &_list1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: 1s all;
+      &_active{
+        transform: translateX(-52%);
+      }
+      ul{
+        list-style: none;
+      }
+    }
+    &:first-child{
+      border-right: none;
+    }
+    &:nth-child(2){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: -33px;
+      width: 500px;
+      height: 470px;
+      border: 2px solid white;
+    }
+    &:last-child{
+      border-left: none;
+    }
+    &_img{
+      width: 300px;
+      height: 150px;
+    }
+    &_desc{
+      width: 200px;
+    }
+    &_button{
+      button{
+        @include main_button;
+      }
+    }
+  }
+  &__item:nth-child(2){
+    .events__item_img{
+        width: 320px;
+        height: 160px;
+      }
+  }
+}
+
+

@@ -1,0 +1,38 @@
+.instr{
+  min-height: 300px;
+  &__header{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+  }
+  &__basic{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &_img{
+      width: 100px;
+      height: 100px;
+    }
+    &_desc{
+      &:after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition-duration: 1s;
+      }
+      &:hover.instr__item_desc:after{
+        transition-duration: 1s;
+        width: 100%;
+      }
+    }
+  }
+}

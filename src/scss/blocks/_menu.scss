@@ -1,0 +1,25 @@
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  left: -200%;
+  top: 0;
+  background-color: rgb(11 19 45 / 78%);
+  transition-duration: 0.5s;
+  &__basic{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-between;
+    list-style: none;
+  }
+  &__active{
+    transition-duration: 0.5s;
+    left: 0;
+  }
+}
